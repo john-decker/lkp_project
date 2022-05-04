@@ -1,0 +1,321 @@
+        h1 {
+          font-family: Verdana, sans-serif;
+        }
+
+        h2 {
+          font-family: Roboto, sans-serif;
+        }
+
+        h3 {
+          font-family: Cuprum, sans-serif;
+        }
+
+        
+        .lkp-banner{
+          background-color: #99582a;
+          font-family: Trebuchet MS, sans-serif;
+          color:  ghostwhite;
+          text-shadow: 0.15em 0.25em #6f1d1b;
+          box-shadow: 0.2em 0.3em 0.2em #663300;
+          padding: 1em;
+        }
+
+
+        .information {
+          margin-top: 2em;
+
+        }
+
+        .info-buttons {
+          padding-top: 0.5em;
+          padding-bottom: 0.5em;
+        }
+
+        .information-text {
+          /*background-color: red;  For browsers that do not support gradients */
+          /*background-image: linear-gradient(to right, red , yellow);*/
+          font-family: Garamond, serif;
+          font-size: 1.25em;
+          max-height: 50vh;
+          padding-top: 1.5em;
+          border-top:  solid;
+          border-color:  #6f1d1b;
+          padding-right:  1em;
+          margin-top: 1em;
+          margin-bottom: 2em;
+          overflow: scroll;
+        }
+
+        .btn {
+          background-color: #99582a;
+          border-color: #99582a;
+          color: #FFFFFF;
+          box-shadow: 0.1em 0.1em #3c096c;
+        }
+
+        .btn:hover{
+          background-color: #6f1d1b;
+          border-color: #480ca8;
+        }
+
+        .btn:focus {
+          background-color: #ffc533;
+          border-color: #99582a;
+          color: #6f1d1b;
+          box-shadow: 0.25em 0.25em #002e4d;
+        }
+
+        
+        .explanatory-text-section-intro {
+          margin: 1.5em;
+          font-family: Garamond, serif;
+          font-size: 1.25em;
+          padding-bottm: 3em;
+        }
+
+        .explanatory-text-section-graph {
+          margin: 1.5em;
+          font-family: Garamond, serif;
+          max-height: 50vw;
+          font-size: 1.25em;
+          overflow: scroll;
+          padding-bottm: 3em;
+          margin-bottom: 1em;/
+        }
+        
+        .explanatory-text-section-occupation {
+          margin: 1.5em;
+          font-family: Garamond, serif;
+          font-size: 1.25em;
+          padding-bottm: 3em;
+        }
+
+        .explanatory-text-section-terms {
+          margin: 1.5em;
+          font-family: Garamond, serif;
+          max-height: 93vw;
+          font-size: 1.25em;
+          overflow: scroll;
+          padding-bottm: 3em;
+          margin-bottom: 3em;
+        }
+
+        .explanatory-text-section-time {
+          margin: 1.5em;
+          font-family: Garamond, serif;
+          max-height: 100vw;
+          font-size: 1.25em;
+          overflow: scroll;
+          padding-bottm: 3em;
+          margin-bottom: 3em;
+        }
+
+        .explanatory-text-section-conclusion {
+          margin: 1.5em;
+          font-family: Garamond, serif;
+          font-size: 1.25em;
+          padding-bottm: 3em;
+        }
+
+        .graph-caption {
+          font-family: Garamond, serif;
+          font-size: 1.25em;
+          text-align: right;
+          padding-top: 0.25em;
+          padding-bottom:  0.25em;
+          color: #604020;
+        }
+
+        .network-wrapper{
+          display: block;
+          justify-content: center;
+          background-color: rgba(255, 230, 167, 0.9);
+          border-radius: 1em;
+          max-height: 60vw;
+          min-height: 50vw;
+          padding-left: 0.5em;
+          padding-top: 0.75em;
+          overflow: scroll;
+        }
+
+        .network-wrapper:hover {
+          box-shadow: -0.55em 0.55em 0.55em 0.55em #e6f5ff;
+          background-color: rgba(255, 197, 51, 0.8);
+        }
+
+        .network-graph {
+          width: 100%;
+          height: 100%;
+          padding-right: 1.5em;
+          padding-top: 3em;
+        }
+
+        .network-frame {
+          width: 100%;
+          height: 100%;
+          
+        }
+        
+        .terms-wrapper {
+          display: flex;
+          background-color: rgba(255, 230, 167, 0.9);
+          border-radius: 1em;
+          min-height: 100vw;
+          padding-left: 2.5em;
+          pading-top: 1.5em;
+          margin-top: 1.5em;
+          overflow: scroll;
+
+        }
+
+        .terms-wrapper:hover {
+          box-shadow: 0.5em 0.5em 0.5em 0.15em #e6f5ff;
+          background-color: rgba(255, 197, 51, 0.8);
+        }
+
+        .names-graph {
+          width: 100%;
+          height: 100%;
+          margin-top: 2em;
+        }
+
+        .terms-caption {
+          font-family: Garamond, serif;
+          font-size: 1.25em;
+          text-align: left;
+          padding-top: 0.25em;
+          padding-bottom:  0.25em;
+          color: #604020;
+        }
+
+       /*using techinques from: https://stackoverflow.com/questions/38487039/how-to-horizontally-align-iframe-div-within-parent/38488012*/
+        .terms-frame {
+          display: block;
+          width: 100%;
+          vertical-align: center;
+          height: 100%;
+        }
+
+
+        .occupation-wrapper-left {
+          display: flex;
+          background-color: rgba(255, 230, 167, 0.9);
+          border-radius: 1em;
+          min-height:  40vh;
+          height: 50vw;
+          max-height: 50vw;
+          padding-left:  2.5em;
+          pading-bottom: 1.5em;
+          overflow: scroll;
+        }
+
+
+        .occupation-wrapper-left:hover {
+          box-shadow: 0.5em 0.5em 0.5em 0.15em #e6f5ff;
+          background-color: rgba(255, 197, 51, 0.8);
+        }
+
+        .occupation-graph-left {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: auto;
+          margin-bottom: auto;
+          width: 100%;
+          height: 100%;
+          padding-top: 5em;
+          padding-left: 0.5em;
+          padding-right: 1.5em;
+        }
+
+        .occ-caption {
+          font-family: Garamond, serif;
+          font-size: 1.25em;
+          text-align: center;
+          padding-top: 0.5em;
+          padding-bottom:  0.25em;
+          color: #604020;
+        }
+
+        .occupation-frame-left {
+          display: block;
+          width: 100%;
+          vertical-align: center;
+          height: 100%;
+        }
+
+        .occupation-wrapper-right {
+          display: flex;
+          background-color: rgba(255, 230, 167, 0.9);
+          border-radius: 1em;
+          min-height:  40vh;
+          /*height:  80vh;*/
+          height: 50vw;
+          padding-left:  2.5em;
+          pading-bottom: 1.5em;
+          overflow: scroll;
+        }
+
+        .occupation-wrapper-right:hover {
+          box-shadow: -0.5em 0.5em 0.5em 0.15em #e6f5ff;
+          background-color: rgba(255, 197, 51, 0.8);
+        }
+
+        .occupation-graph-right {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: auto;
+          margin-bottom: auto;
+          width: 100%;
+          height: 100%;
+          padding-top: 2.5em;
+          padding-left: 0.5em;
+          padding-right: 1.5em;
+        }
+
+        .occupation-frame-right {
+          display: block;
+          width: 100%;
+          vertical-align: center;
+          height: 100%;
+        }
+
+        .time-wrapper {
+          display: flex;
+          background-color: rgba(255, 230, 167, 0.9);
+          border-radius: 1em;
+          min-height: 100vw;
+          padding-left: 4em;
+          pading-top: 5em;
+          margin-top: 1.5em;
+          overflow: scroll;
+        }
+
+        .time-wrapper:hover {
+          box-shadow: -0.55em 0.55em 0.55em 0.55em #e6f5ff;
+          background-color: rgba(255, 197, 51, 0.8);
+        }
+
+        .time-graph {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: auto;
+          margin-bottom: auto;
+          width: 100%;
+          height: 100%;
+          margin-top: 2.5em;
+        }
+
+       /*using techinques from: https://stackoverflow.com/questions/38487039/how-to-horizontally-align-iframe-div-within-parent/38488012*/
+        .time-frame {
+          display: block;
+          width: 100%;
+          vertical-align: center;
+          height: 100%;
+        }
+      
+      .nav {
+        padding-bottom: 5em;
+      }

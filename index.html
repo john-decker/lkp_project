@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="lkp_scripts/lkp.css">
+
+     <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.1.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+
+    <script src="lkp_scripts/lkp.js"></script>
+    <!-- <script>hello_there()</script> -->
+
+
+    <title>LKP Data Visualizations</title>
+  </head>
+  <body>
+    <div class="container-lg">
+      <div class="jumbotron jumbotron-fluid lkp-banner">
+        <div class="container">
+          <h1 class="display-4">Leonarduskerk Project</h1>
+          <p class="lead">Data Visualizatons.</p>
+        </div>
+      </div>
+
+        <div class="row">
+            <div class="col-sm-5 information"><h2>Information</h2>
+              <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-primary" type="button" onclick="change_text_project()">Project</button>
+                <button class="btn btn-primary" type="button" onclick="change_text_church()">Church</button>
+                <button class="btn btn-primary" type="button"onclick=" change_text_visualizations()">Graphs</button>
+                <button class="btn btn-primary" type="button"onclick="change_text_mute()">Clear</button>
+              </div>
+
+              <div class="explanatory-text-section information-text">
+                <h3 id="target-header"></h3>
+                <p id="target-text"></p>   
+              </div>
+            </div>
+
+            <div class="col-sm-7">
+              <div class="explanatory-text-section-intro">
+                <h1>Building and maintaining a Church is an act of community</h1>
+                <p>
+                  In the fifteenth century, a church was the “beating heart” of its parish. It was a point of pride for people living in the district, a sanctuary for the faithful, a site where locals conducted business and interacted socially, and a place where the community gathered during good times and bad. The bells in its belfrey rang out to mark the hours of the day, to signal special occasions, to announce the death of a parishioner, and to call the parish to assemble during times of crisis and danger. A church was not simply a building anchored to a particular spot in a town, it was a living, ever-changing nexus for spiritual, economic, and social activities. In short, it was a hub in a complex network of relationships between people, places, and institutions.<br/><br/>
+
+                  Building and maintaining a church was not a one-time event. It was an ongoing labor deeply entangled with individual pride, personal belief, and group identities. Rather than being the accomplishment of any one person, it was an act of community.
+                </p>
+                
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                  <div class="explanatory-text-section-graph">
+                    <h2>Day-to-day connections<br/>are meaningful</h2>
+                    <p>
+                      When we think about churches, we often try to find the names of the architects or master builders who designed the building, the painters who created the images hung throughout the church, the sculptors who carved the statues of saints, or the gold and silver smiths who crafted the metal objects used during the Mass. While the efforts of these individuals are worth studying, they form only a portion of what was needed to keep the church operational. Rather than focus on the work of a select few, who often were brought in from nearby towns, it is necessary to consider the labor of numerous local skilled and unskilled tradespeople if we want to understand connections between a church building and its community more holistically. This task is complicated by the fact that not everyone recorded in the documents is mentioned by name and that in some cases we must resort to abstract constructs like “Anonymous Carpenter” rather than a specific name.<br/><br/>
+
+                      A network graph is especially useful for seeing connections between people, even those whose actual names we do not know. The records for the Leonarduskerk note when people were employed to carry out needed work. Some of the items listed in the records are for expensive things like books, chandeliers, and statues of St. Leonard. The majority, however, record things like cleaning the altar, work for ongoing construction or for repairs, transporting building materials, and paying musicians and entertainers for annual festivals. <br/><br/>
+
+                      One way of understanding how interconnected people are is to create a “co-occurence” graph in which people are connected to one another depending on which page, or folio, they appear on in the documents. People who appear on more than one page not only were employed by the church more often than those who appear on only one folio, they also end up being more heavily connected (or networked) to others throughout the records. <br/><br/>
+
+                      While we cannot know how well the people appearing on the same page knew one another, or how often they interacted with each other, we can say that they were on site during the specific timeframes recorded on each page. We might also be able to assert that those who show up in multiple places, and are heavily connected to others, contributed to the building and upkeep of the church more frequently than others. As such, their relative influence—independent of their social status or wealth—was greater than those who appear less often. For example, <strong>Ellen Winters</strong>, a local washer woman, is more heavily connected in the co-occurence graph than the high-status goldsmith from a different town who appears a small number of times. This points to “locality” being an important aspect of the social work of creating and maintaining a church. 
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-7 network-wrapper">
+                  <div class="network-graph">
+                   <iframe class="embed-responsive-item network-frame" src="bokeh_viz/LKP_Cooccurance_Graph.html" alt="Interactive network graphs showing interconnections between people named in Church documents."></iframe>
+                   
+                  </div>
+                </div>
+                <div caption class="graph-caption">Use control panel to zoom and pan. Hover for more details</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 explanatory-text-section-intro">
+                  <h3>Planning for the Future</h3>
+                  <p>
+                    When a parish built a church, it invested in its own future and shaped its identity for generations to come. The planning, gathering of resources, and assembly of human power needed to complete the job required commitments of time and money that could last decades or even a century. The care and attention needed from parishioners did not end when the church was completed, however. A church, once built, needed to be maintained and that maintenance was an investment in the parish’s present. Ensuring that the high altar was fully outfitted with the items needed for the Mass, that the priests serving in the church were properly attired, and that the sanctuary was appropriately decorated was important. These things announced to anyone who entered that the church was a properly consecrated place of worship. Equally important was ensuring that the interior was tidy, the roof and walls were in good repair, and that the linens used in the church were clean. These made it clear that the parish cared about its church, about its community, and about its reputation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="occupation-wrapper-left">
+                    <div class="occupation-graph-left">
+                   <iframe class="embed-responsive-item occupation-frame-left" src="bokeh_viz/LKP_Occ_Year_left.html" alt="Interactive side-by-side scatter plots showing occupation trends by year and by year and mont."></iframe>
+
+                  </div>
+                  </div>
+                  <div caption class="occ-caption">Horizontal spread indicates multiple entries.</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="occupation-wrapper-right">
+                    <div class="occupation-graph-right">
+                   <iframe class="embed-responsive-item occupation-frame-right" src="bokeh_viz/LKP_Occ_Year_right.html" alt="Interactive side-by-side scatter plots showing occupation trends by year and by year and mont."></iframe>
+
+                  </div>
+                  </div>
+                  <div caption class="occ-caption">Darker dots indicate more than one entry.</div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="explanatory-text-section-occupation">
+                    <h2>Yearly and monthly employment patterns are revealing</h2>
+                    <p>
+                      Building and maintaining a church required the efforts of dozens of people. Each year, those in charge of the church—the church wardens—had to decide which projects to prioritize and how to allocate financial resources as well as personnel. Being able to see which trades were on site during any particular year provides insights into what the churchwardens’ priorities may have been. Looking at the  monthly break down of occupations for each year allows an even more nuanced view of things. Clusterings of related trades such as carpenters, plasterers, and roofers might point to medium- or large-scale construction or maintenance campaigns. The presence of general laborers, vendors, and wagoners might point to phases of preparation in which materials were brought to the site, organized, and stored for future projects. The presence of multiple groups may indicate that several smaller projects were underway simultaneously or else that a large, focused period of work was the priority for the period in question. <br/><br/> 
+
+                      In addition to the types of worker employed, the number of people in the same trade can also provide information about the scope and scale of activities in the church for a given period of time. On the one hand, a single plasterer and his apprentices may indicate that a small area of the church was undergoing construction or maintenance. On the other, four sawyers, several wagoners, and a quarryman may point in a different direction. The amount of heavy building materials—timber and stone—in quantities large enough to require multiple wagon loads provides evidence that a substantial building period was either in preparations or was under way.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row terms-row">
+                <div class="col-sm-7 terms-wrapper">
+                  <div class="names-graph">
+                   <iframe class="embed-responsive-item terms-frame" src="bokeh_viz/LKP_Name_Frequency_Bar_Combo.html" alt="Interactive bar graphs showing top names and terms from dataset."></iframe>
+
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="explanatory-text-section-terms">
+                    <h2>Frequently occurring names and terms sharpen the picture</h2>
+                    <p>
+                      Knowing the various trades active at the church is helpful. Having an idea of who among the tradespeople were there often helps to bring the picture into sharper focus. One way of doing this is to find the frequency at which names appear in the document. The more often a name appears in the records, the higher on the frequency list it will be. Not surprisingly, the names mentioned in the documents the most often <strong>Hendrik Merbeys</strong>, <strong>Jan Tgrex</strong>, and <strong>Heinrich Tullere</strong> are also the most highly networked individuals in the co-occurence graph. These three performed a great deal of work for the church over the period of time analyzed (1452-1464). Merbeys and Tullure were carpenters and often appear in the records together. Tgrex was a plasterer who frequently appears with various of his apprentices. The necessity of using generic names such as “Anonymous Vendor” somewhat skews the frequency for these entries. A large number of such vendors are present throughout the document but cannot necessarily be localized to a specific person. The appearance of these terms, however, provides insight into how often vendors appear in the documents, which in turn highlights the larger mercantile networks needed to accomplish the building and maintenance of the church. <br/><br/> 
+
+                      A similar case can be made for knowing what terms or items appear most frequently in the records. Counting the frequency of commonly occurring terms for the entire document sheds light on the types of things purchased or used most often. Things like ‘chalk,’ ‘tiles,’ and ‘stone’ show the materials in use on a regular basis. Terms like ‘choir’ and ‘school’ provide insight into the parts of the church, or church’s properties, that received repeated attention in the years under study. Finally, terms like ‘sawing,’ ‘plastering,’ and ‘transporting’ make clear the frequency with which these tasks were used in the ongoing upkeep of the church. <br/><br/>
+
+                      Considering both the names and terms together begins to sketch connections that invite further research and analysis. 
+                    </p>
+                  </div>
+                </div>
+                <div class=terms-caption>Hover over bars for emphasis</div>
+              </div><br/><br/>
+
+              <div class="row">
+                <div class="col-sm-5">
+                  <div class="explanatory-text-section-time">
+                    <h2>Names and terms over time show patterns of use and engagement</h2>
+                    <p>
+                      Another way of approaching the potential relationships of names and terms is to look at the frequency of these over time. The top occurring names over the period 1450-1464 include the seemingly ever present <strong>Hendrik Merbeys</strong>, <strong>Jan Tgrex</strong>, and <strong>Heinrich Tullere</strong> along with <strong>Hendrick Trudens</strong> (a carpenter), <strong>Master Jan de Scervensteendeckere</strong> (a roofer working with slate), <strong>Henric Honen</strong> (a laborer), and a watchman named <strong>Williken</strong>. The most common terms over time include already mentioned items like ‘sawing,’ ‘chalk,’ and ‘stone.’ Visualizing these dimensions across time places these now familiar names and terms into interesting new arrangements. <br/><br/>
+
+                      The data show considerable spikes in occurrence for particular names and particular items in various years. In 1458, for example, references to <strong>Merbeys</strong>, <strong>Tgrex</strong>, and <strong>Tullere</strong>rise sharply indicating that their services were in heightened demand. Similarly, a spike in the terms graph shows an increase in reference to ‘chalk,’ ‘choir’ and ‘tiles’ in 1456 The constellation of materials and location is intriguing as it seems to associate roof and wall work with the choir. At first glance, the increase in materials (chalk and tiles) not match the strongest spike in employment for the top names. <br/><br/>
+
+                      On closer inspection, however, a subtle pattern appears. In 1456  <strong>Merbeys</strong>, <strong>Tgrex</strong>, <strong>Tullere</strong>, and <strong>Master Jan de Scervensteendeckere</strong> experienced an increase in mentions. This spike is much lower than the one for 1458 and is easy to overlook at first. It appears that the carpenters, plasterer, and slate tile roofer began work on the choir. The work tapers off for the roofer by 1458 but picks up for the others—perhaps because the roofing needed to be completed before the others could intensify their work. If this is indeed how the work unfolded, the spike in materials like chalk, which was likely used for plaster work, indicates that the church wardens were stockpiling anticipated items at the outset of a building project so that they were available as soon as they were needed. While more research is needed to confirm this, if it is true it demonstrates the logistical sophistication of those charged with building and maintaining the church. 
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-7 time-wrapper">
+                  <div class="time-graph">
+                   <iframe class="embed-responsive-item time-frame" src="bokeh_viz/LKP_TimeSeries_Layout.html" alt="Interactive line graphs showing frequency of names and and terms by year."></iframe>
+
+                  </div>
+                </div>
+                <div caption class="graph-caption">Hover over lines for more information</div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="explanatory-text-section-conclusion">
+                    <h2>Concluding Remarks</h2>
+                    <p>
+                      The records of the Leonarduskerk contain a wealth of information about the connections between people and institutions. For the years studied thus far (1450-1464) there are twelve-hundred entries for various items and over six-hundred mentions of individuals (named and unnamed). The amount of information in these entries, though small by “big data” standards, is too large to understand without the aid of data analysis and visualization. <br/><br/>
+
+                      Complex relationships between people such as their potential connections to each other are not readily apparent in each record. Occasionally, an entry will mention the name of a master tradesperson and his apprentices, or names that are similar enough to imply familial relationship will appear, but without the aid of network analysis the individuals mentioned in the records remain largely isolated. Looking for patterns in when various trades were onsite is also a tool for preserving the texture of social activity. Being able to see the full array of trades at work on the church for any given year can help us understand when major activities occurred. Seeing the monthly patterns per year help us better perceive the seasonal rhythms, if any, that shaped and guided the year. Finally, knowing the frequency with which certain terms appear and certain names appear—both across the entire period as well as on a yearly basis—can help us see time-bound patterns that are difficult to perceive when reading through each entry in the documents.
+
+                      The analysis of the documents is ongoing and as the data grows and changes, so too will the visualizations provided here. Even when the full range of data in the documents is available, there will be no definitive picture of what it all might mean. While various analytical approaches can provide access to more nuanced relationships, we can never recover the full texture of daily life. As a result, data analysis, and the visualizations derived from it, will almost certainly pose more questions than provide answers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        </div>
+        
+        <!-- <div class="row">
+          <nav class="nav">
+            <a class="nav-link active" href="#">Active</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </nav>
+        </div> -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
