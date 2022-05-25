@@ -7,7 +7,9 @@
         }
 
         h3 {
-          font-family: Cuprum, sans-serif;
+          font-family: Roboto, sans-serif;
+          color: #99582a;
+
         }
 
         
@@ -319,3 +321,40 @@
       .nav {
         padding-bottom: 5em;
       }
+
+      .dash-graph {
+        padding-top: 1.5em;
+        border-bottom: solid;
+        height:  70vh;
+      }
+
+      .dash-table {
+        margin-left: -1em;
+        padding-top: 1.5em;
+        border-bottom: solid;
+        height:  70vh;
+        padding-bottom: 5em;
+      }
+
+      .freq-chart {
+        padding-top: 1.5em;
+        border-bottom: solid;
+        height:  165vh;
+        margin-bottom: 3em;
+        overflow: hidden;
+      }
+
+      .time-chart {
+        padding-top: 1.5em;
+        border-bottom: solid;
+        height:  165vh;
+        margin-bottom: 3em;
+        overflow: hidden;
+      }
+
+      .occupation-chart {
+        border-bottom: solid;
+        height:  80vh;
+      }
+
+
